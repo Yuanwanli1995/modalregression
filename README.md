@@ -133,6 +133,7 @@ computing time: 153.13 s  # 局部多项式方法非常耗时
 ```r
 modal.plot(bmr1) 
 ```
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210416152341498.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcwNTk1Mw==,size_16,color_FFFFFF,t_70#pic_center)
 
 #####  3.4 模型预测
 模型预测函数modalpredict(model, x_predict) , model为训练的mr模型， x_predict为预测数据，必须与x_train维度相同，类型为数据框。
@@ -142,3 +143,4 @@ pred<-modalpredict(bmr1, x_train)
 plot(x_train, y_train)
 lines(x_train,pred,col="red")
 ```
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210416152355993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcwNTk1Mw==,size_16,color_FFFFFF,t_70#pic_center)
