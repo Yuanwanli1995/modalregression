@@ -25,7 +25,7 @@
 2 该包的源文件存放在github中，要借助包管理工具devtools包，如果没有安装devtools，首先安装并加载devtools 
 
 ```r
-install(devtools)
+install.packages(devtools)
 library(devtools)
 ```
 
