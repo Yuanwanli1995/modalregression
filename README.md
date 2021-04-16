@@ -1,33 +1,48 @@
-@[toc]
+
 #  众数回归R语言包 modalreg 
 ### 1 简介  
 主要功能为实现众数回归， 包括参数与非参数模型，提供自动带宽选择，模型预测与模型评估。 
+
 模型方法包括：
+
 (1) 线性众数模型linear
+
 (2) 非参数B样条众数回归模型 bmr
+
 (3) 非参数局部多项式众数回归模型 lmr
+
 (4) 非参数核方法众数回归模型  kmr
 
 两种交叉验证的带宽选择方法： 
+
 (1) 基于最优预测覆盖率 predict
+
 (2) 基于最小二乘准则  mse
+
 ### 2 使用方法  
 1 打开Rstudio或R 
+
 2 该包的源文件存放在github中，要借助包管理工具devtools包，如果没有安装devtools，首先安装并加载devtools 
+
 ```r
 install(devtools)
 library(devtools)
 ```
+
 3 安装modalreg包
 ```r
 install_github("yuanwanli1995/modalregression/modalreg") 
 ```
+
 4 加载modalreg
+
 以上步骤只要第一次使用时需要，安装完成后，每次只需要加载。 
+
 ```r
 library(modalreg)
 ```
 ###  3 使用介绍 
+
 #####  3.1 模型训练 
 模型训练函数modalreg(x_train, y_train, method, bandwidth_criterion, hyperparameter，interval1，interval2)
 参数解释
@@ -43,7 +58,9 @@ library(modalreg)
 
 **示例**
 为了方便模拟实验，modalreg内置一个模拟数据生成方法datagenerater(n,e,f) ,假定数据来自以下模型 
+
 $$Y  = f(X)+\epsilon$$
+
 > n 生成数据样本量 
 > e 生成数据噪声类型， "gauss"， "mixgauss"，"mixgausssymmetry"，"cauchy"，"gamma"，"beta"五种 
 > f 为函数类型, 可选 "quodratic"，"exp"，"log"，"sin"，"mexicohat"，"linear" 五种
